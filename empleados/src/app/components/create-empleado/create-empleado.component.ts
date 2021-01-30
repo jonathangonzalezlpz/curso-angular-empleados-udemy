@@ -88,8 +88,8 @@ export class CreateEmpleadoComponent implements OnInit {
   }
 
   esEditar(){
-    this.titulo='Editar Empleado';
     if(this.id != null){ //Solo ejecutamos el método si se paso un id
+      this.titulo='Editar Empleado';
         this._empleadoService.getEmpleado(this.id).subscribe(data => {
           this.loading = false;
           /*console.log(data.payload.data()['nombre']); Data devuelve todos los datos y los corchetes [] filtran*/
