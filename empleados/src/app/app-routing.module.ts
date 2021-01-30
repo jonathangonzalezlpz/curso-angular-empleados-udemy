@@ -7,7 +7,8 @@ const routes: Routes = [
   {path: '', redirectTo: 'list-empleados', pathMatch: 'full' }, //Establecemos una ruta por defecto para el caso en que no se indique un path
   {path: 'list-empleados', component: ListEmpleadosComponent},
   {path: 'create-empleado', component: CreateEmpleadoComponent},
-  {path: '**', redirectTo: 'list-empleados', pathMatch:'full'} //Caso de path no válido, IMPORTANTE COLOCAR AL FINAL
+  {path: 'editEmpleado/:id', component: CreateEmpleadoComponent}, // /:id le indica que le voy a estar pasando un id dinámico
+  {path: '**', redirectTo: 'list-empleados', pathMatch:'full'}//Caso de path no válido, IMPORTANTE COLOCAR AL FINAL
 ];
 
 @NgModule({
